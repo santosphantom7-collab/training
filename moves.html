@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Basketball Move Trainer</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+margin:0;
+text-align:center;
+}
+
+header{
+background:#1e293b;
+padding:25px;
+font-size:30px;
+}
+
+.moves{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.move{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+cursor:pointer;
+width:200px;
+transition:.3s;
+}
+
+.move:hover{
+background:#334155;
+transform:scale(1.05);
+}
+
+.container{
+margin-top:40px;
+width:70%;
+margin-left:auto;
+margin-right:auto;
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+}
+
+#video{
+margin-top:20px;
+width:560px;
+height:315px;
+border:none;
+border-radius:10px;
+}
+
+#title{
+font-size:24px;
+margin-bottom:10px;
+}
+
+#description{
+margin-top:10px;
+line-height:1.6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+🏀 Basketball Move Trainer
+</header>
+
+<div class="moves">
+
+<div class="move" onclick="showMove('kyrie')">
+Kyrie Pull-Up
+</div>
+
+<div class="move" onclick="showMove('shai')">
+SGA Midrange
+</div>
+
+<div class="move" onclick="showMove('fade')">
+Fadeaway
+</div>
+
+</div>
+
+<div class="container">
+
+<div id="title">Select a move</div>
+
+<div id="description">
+Click one of the moves above to see the breakdown and video.
+</div>
+
+<br>
+
+<iframe id="video"></iframe>
+
+</div>
+
+<script>
+
+function showMove(move){
+
+let title=document.getElementById("title")
+let desc=document.getElementById("description")
+let video=document.getElementById("video")
+
+if(move==="kyrie"){
+
+title.innerText="Kyrie Irving Pull-Up Jumper"
+
+desc.innerText="Kyrie creates separation using a quick dribble move. As the defender reacts, he plants his inside foot, gathers the ball smoothly, rises straight up, and releases the jumper at the peak. The key is balance and quick elevation."
+
+video.src="https://www.youtube.com/embed/8s0k0p0O6eU"
+
+}
+
+if(move==="shai"){
+
+title.innerText="Shai Gilgeous-Alexander Midrange Stop"
+
+desc.innerText="SGA attacks slowly with controlled dribbles. When the defender retreats, he stops suddenly in the midrange area, rises immediately, and shoots before the defender can recover. The move relies on rhythm, patience, and timing."
+
+video.src="https://www.youtube.com/embed/4yO2P4fKXgM"
+
+}
+
+if(move==="fade"){
+
+title.innerText="Basketball Fadeaway Jumper"
+
+desc.innerText="The fadeaway creates space by leaning backward while jumping. The shooter plants one foot, turns slightly away from the defender, jumps backward, and releases the ball at the highest point of the shot."
+
+video.src="https://www.youtube.com/embed/k6E7L8r0L0s"
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
